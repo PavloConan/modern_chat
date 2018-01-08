@@ -1,0 +1,9 @@
+.message
+  .message--header
+    %span.message--author
+      = message.author
+    %span.message--time
+      = message.created_at
+  .message--text
+    - message.text.lines.each do |line|
+      %p= line

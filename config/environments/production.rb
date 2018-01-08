@@ -2,6 +2,8 @@ Rails.application.configure do
     # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
 
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

@@ -1,0 +1,4 @@
+.messages.js-messages
+  .messages--content.js-messages--content
+    - messages.each do |message|
+      = c("message", message: MessagePresenter.new(message))
