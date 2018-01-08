@@ -12,7 +12,7 @@ function submitForm() {
 }
 
 input.addEventListener("keydown", event => {
-  if (event.keyCode === 13 && event.metaKey) {
+  if (event.keyCode === 13) {
     event.preventDefault();
     submitForm();
   }
