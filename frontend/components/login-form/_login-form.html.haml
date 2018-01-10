@@ -1,0 +1,8 @@
+.login-form
+  .login-form--header LOG IN
+  = form_tag sessions_path do
+    = text_field_tag :name, "", class: 'login-form--input', placeholder: 'Username...'
+    = password_field_tag :password, "", class: 'login-form--input', placeholder: 'Password...'
+    = submit_tag "Log me in!", class: 'login-form--submit'
+  .login-form--footer
+    = link_to "Sign Up!", signup_path

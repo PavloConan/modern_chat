@@ -5,7 +5,7 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def send_message(payload)
-    message = Message.new(author: current_user, text: payload["message"])
+    message = Message.new(user_id: user_id, text: payload["message"])
     if message.save
       ActionCable.server.broadcast "chat", message: render(message)
     end

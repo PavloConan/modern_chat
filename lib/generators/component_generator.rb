@@ -2,7 +2,7 @@ class ComponentGenerator < Rails::Generators::Base
   argument :component_name, required: true
 
   def create_view_file
-    create_file "#{component_path}/#{component_name}.html.haml"
+    create_file "#{component_path}/_#{component_name}.html.haml"
   end
 
   def create_css_file
