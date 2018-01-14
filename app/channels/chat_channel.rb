@@ -1,20 +1,13 @@
 class ChatChannel < ApplicationCable::Channel
-
   def subscribed
-    stream_from "chat"
+    stream_from "chat#{params[:room]}"
   end
 
-  def send_message(payload)
-    message = Message.new(user_id: user_id, text: payload["message"])
-    if message.save
-      ActionCable.server.broadcast "chat", message: render(message)
-    end
+  def receive(payload)
+    message = Message.create(
+      user_id: user_id,
+      text: payload["message"],
+      chatroom_id: payload["chatroomId"]
+    )
   end
-
-  private
-
-  def render(message)
-    ApplicationController.new.helpers.c("message", message: message)
-  end
-
 end

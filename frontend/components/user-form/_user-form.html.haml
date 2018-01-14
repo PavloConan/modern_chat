@@ -1,6 +1,6 @@
 .user-form
   .user-form--header SIGN UP
-  = form_for @user do |f|
+  = form_for user do |f|
     = f.text_field :name, class: 'user-form--input', placeholder: 'Username'
     = f.password_field :password, class: 'user-form--input', placeholder: 'Password'
     = f.password_field :password_confirmation, class: 'user-form--input', placeholder: 'Confirm password'

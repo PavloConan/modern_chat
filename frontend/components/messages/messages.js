@@ -11,7 +11,9 @@ function scrollToBottom() {
 
 scrollToBottom();
 
-setCallback(message => {
-  content.insertAdjacentHTML("beforeend", message);
+setCallback(data => {
+  messages
+    .querySelector(`[data-chatroom-id='${data.chatroomId}']`)
+    .insertAdjacentHTML("beforeend", data.message);
   scrollToBottom();
 });

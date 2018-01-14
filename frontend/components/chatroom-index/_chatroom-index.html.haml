@@ -1,0 +1,4 @@
+.chatroom-index
+  - chatrooms.each do |chatroom|
+    .chatroom-index--name
+      = button_to chatroom.name_hashtagged, chatroom_path(chatroom.slug), class: 'chatroom-index--button', method: 'get'

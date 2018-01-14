@@ -1,4 +1,4 @@
 .messages.js-messages
-  .messages--content.js-messages--content
+  .messages--content.js-messages--content{data: {chatroom_id: chatroom.id}}
     - messages.each do |message|
       = c("message", message: MessagePresenter.new(message))
