@@ -1,0 +1,49 @@
+.chatroom-form {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+  margin-top: 25vh;
+
+  &--text {
+    font-weight: bold;
+    text-align: center;
+    flex: 1 1 auto;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 50px;
+    outline: none;
+    transition: border-color 150ms;
+    box-sizing: border-box;
+    resize: none;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #3f94f9;
+    }
+  }
+
+  &--submit {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 0;
+    background: #3f94f9;
+    border: 1px solid #3f94f9;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    transition: opacity 150ms;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}

@@ -3,6 +3,15 @@
   height: 50%;
   width: 200px;
 
+  &--new {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #3f94f9;
+      margin-left: 15px;
+    }
+  }
+
   &--name {
     text-align: center;
   }
