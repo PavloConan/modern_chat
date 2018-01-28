@@ -1,4 +1,4 @@
 .chatroom-form
   = form_for chatroom, url: chatrooms_path, method: 'post' do |f|
-    = f.text_field :topic, class: 'chatroom-form--text', placeholder: 'pick a name...', maxlength: 30, required: true
+    = f.text_field :topic, class: 'chatroom-form--text', placeholder: 'pick a name...', maxlength: 20, required: true
     = f.submit 'Create channel', class: 'chatroom-form--submit'

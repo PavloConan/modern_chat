@@ -4,19 +4,18 @@
   width: 200px;
 
   &--new {
+    text-align: center;
+
     a {
       text-decoration: none;
       font-weight: bold;
       color: #3f94f9;
-      margin-left: 15px;
+      width: 100%;
     }
   }
 
-  &--name {
-    text-align: center;
-  }
-
   &--button {
+    font-size: 13px;
     width: 100%;
     background: #3f94f9;
     border: none;
@@ -25,5 +24,6 @@
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: left;
   }
 }
