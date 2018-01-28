@@ -5,6 +5,8 @@
     "@rails/webpacker": "^3.2.0",
     "actioncable": "^5.1.4",
     "coffeescript": "1.12.7",
+    "jquery": "^3.2.1",
+    "jquery-ujs": "^1.2.2",
     "normalize.css": "^7.0.0",
     "postcss-nested": "^3.0.0"
   },

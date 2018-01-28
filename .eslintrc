@@ -4,11 +4,17 @@
   "plugins": ["prettier"],
 
   "env": {
+    "jquery": true,
     "browser": true
   },
 
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/no-extraneous-dependencies": {
+      "error": {
+        "devDependencies": true
+      }
+    }
   },
 
   "parser": "babel-eslint",

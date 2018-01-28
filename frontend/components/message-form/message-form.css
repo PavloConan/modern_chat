@@ -1,5 +1,5 @@
 .message-form {
-  display: flex;
+  display: inline;
   width: 100%;
   height: 100%;
 
@@ -7,8 +7,9 @@
     display: none;
   }
 
-  &--input {
+  &--text {
     flex: 1 1 auto;
+    width: 90%;
     padding: 12px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 18px;
@@ -25,7 +26,7 @@
 
   &--submit {
     flex: 0 1 auto;
-    height: 100%;
+    height: 65px;
     padding: 12px 48px;
     background: #3f94f9;
     border: 1px solid #3f94f9;
@@ -34,6 +35,7 @@
     outline: none;
     transition: opacity 150ms;
     cursor: pointer;
+    vertical-align: top;
 
     &:hover,
     &:focus {

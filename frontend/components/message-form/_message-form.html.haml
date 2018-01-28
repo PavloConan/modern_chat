@@ -1,3 +1,5 @@
-.message-form.js-message-form
-  %textarea.message-form--input.js-message-form--input{:autofocus => ""}
-  %button.message-form--submit.js-message-form--submit Send
+.message-form
+  = form_for message, url: '' do |f|
+    = f.text_area :text, class: 'message-form--text js-message-form--text'
+    = f.hidden_field :chatroom_id, value: chatroom.id, class: 'js-message-form--chatroom-id'
+    = f.submit 'Send', class: 'message-form--submit js-message-form--submit'

@@ -2,14 +2,26 @@ import createChannel from "client/cable";
 
 let callback;
 
-const chat = createChannel("ChatChannel", {
-  received({ message }) {
-    if (callback) callback.call(null, message);
-  }
+$.ajax({
+  type: "GET",
+  dataType: "json",
+  url: "/all_chatrooms"
+}).done(data => {
+  window.chat = {};
+  data.room_ids.forEach(chatroomId => {
+    window.chat[`room${chatroomId}`] = createChannel(
+      { channel: "ChatChannel", room: chatroomId },
+      {
+        received({ message }) {
+          if (callback) callback.call(null, { message, chatroomId });
+        }
+      }
+    );
+  });
 });
 
-function sendMessage(message) {
-  chat.perform("send_message", { message });
+function sendMessage(message, chatroomId) {
+  window.chat[`room${chatroomId}`].send({ message, chatroomId });
 }
 
 function setCallback(fn) {

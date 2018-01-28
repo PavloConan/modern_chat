@@ -2,7 +2,8 @@
   display: block;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
   height: 100%;
   margin-top: 25vh;
 
@@ -37,6 +38,7 @@
     outline: none;
     transition: border-color 150ms;
     box-sizing: border-box;
+    margin-bottom: 10px;
 
     &:hover,
     &:focus {
