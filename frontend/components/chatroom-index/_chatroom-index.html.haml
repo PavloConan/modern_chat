@@ -1,4 +1,6 @@
 .chatroom-index
+  .chatroom-index--new
+    = link_to "+ New channel +", new_chatroom_path
   - chatrooms.each do |chatroom|
     .chatroom-index--name
       = button_to chatroom.name_hashtagged, chatroom_path(chatroom.slug), class: 'chatroom-index--button', method: 'get'
